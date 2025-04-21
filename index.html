@@ -3,18 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Round the Mountain</title>
+  <title>Home - Round the Mountain</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-purple: #7a579b;
+      --primary-purple-dark: #6a488b;
+      --light-blue-gray: #f5f7fa;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        <h1>Round the Mountain</h1>
-        <p>Welcome to RTM Games!</p>
-        <ul>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="support.html">Support</a></li>
-        </ul>
+<body class="bg-[var(--light-blue-gray)] text-gray-800">
+  <!-- Banner -->
+  <div class="relative h-[400px] bg-cover bg-center" style="background-image: url('assets/banner.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+      <img src="assets/logo.png" alt="Round the Mountain Logo" class="w-40 h-40 mb-4 rounded-full border-4 border-white" />
+      <h1 class="text-4xl font-bold text-white mb-2">Peaceful Peaks of Play</h1>
+      <p class="text-lg text-gray-200">Handcrafted for Quiet Moments and Honest Fun.</p>
     </div>
+  </div>
+
+  <!-- Navigation Cards -->
+  <div class="max-w-4xl mx-auto mt-12 px-4 grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <div class="bg-white p-6 rounded-lg shadow text-center">
+      <h2 class="text-xl font-semibold mb-4">Need Help?</h2>
+      <p class="mb-6 text-md">
+        Visit our customer support page for assistance with any questions or feedback.
+      </p>
+      <a href="support.html" class="inline-block bg-[var(--primary-purple)] text-white px-6 py-2 rounded hover:bg-[var(--primary-purple-dark)] transition">
+        Go to Support
+      </a>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow text-center">
+      <h2 class="text-xl font-semibold mb-4">Privacy Policy</h2>
+      <p class="mb-6 text-md">
+        Learn how we protect your data and respect your privacy while you play.
+      </p>
+      <a href="privacy.html" class="inline-block bg-[var(--primary-purple)] text-white px-6 py-2 rounded hover:bg-[var(--primary-purple-dark)] transition">
+        View Privacy Policy
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-md text-gray-600">
+    <p>
+      &copy; <span id="year"></span> Round the Mountain. All rights reserved.
+    </p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
